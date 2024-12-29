@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Typography, useTheme } from '@mui/material';
 import { Login } from './features/auth/component/Login';
+import { OtpVerification } from './features/auth/component/OtpVerification';
+import { Signup } from './features/auth/component/Signup';
 
 function App() {
   const [data, setData] = useState([]);
@@ -17,8 +19,10 @@ function App() {
   }, [data]);
 
   return (
-    <div>
-    <Login/>
+    <div style={{gap: '2px'}}>
+      <Signup/>
+      <OtpVerification/>
+      <Login/>
     </div>
   )
 }
